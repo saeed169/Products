@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Products</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="product">
+        <div class="title">
+            <h3>harm</h3>
+            <p>CRUD Management System in javascript</p>
+        </div>
+
+        <div class="inputs">
+            <input type="text" id="title" placeholder="Title">
+
+            <div class="total">
+                <input type="number" id="salery" onkeyup="getTotal()" placeholder="salery">
+                <input type="number" id="tax" onkeyup="getTotal()" placeholder="tax">
+                <input type="number" id="ads" onkeyup="getTotal()" placeholder="ads">
+                <input type="number" id="discount" onkeyup="getTotal()" placeholder="discount">
+                <small id="total"></small>
+            </div>
+
+            <button id="create">Create Product</button>
+
+        </div>
+
+        <div class="table">
+            <h3>Total Products</h3>
+            <table>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Salery</th>
+                    <th>Tax</th>
+                    <th>Ads</th>
+                    <th>Discount</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+
+                <tbody id="tbody"></tbody>
+                
+            </table>
+        </div>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
