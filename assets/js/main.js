@@ -25,13 +25,13 @@ function getTotal()
 
 // Create total
 let addData;
-if(localStorage.product != null){
+if(localStorage.product !== null){
     addData = JSON.parse(localStorage.product);
 }else{
     addData = [];
 }
 
-// console.log(addData)
+// Create Product
 submit.onclick = function(){
     let newPro = {
         title:title.value,
