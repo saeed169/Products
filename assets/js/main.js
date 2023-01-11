@@ -43,7 +43,7 @@ submit.onclick = function(){
     }
 
     if(total.innerHTML == ''){
-        console.log('Empty')
+        alert('Empty Total')
     }else{
         if(mood === 'create'){
             addData.push(newPro);
