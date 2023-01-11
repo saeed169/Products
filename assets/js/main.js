@@ -42,18 +42,22 @@ submit.onclick = function(){
         total:total.innerHTML,
     }
 
-    if(mood === 'create'){
-        addData.push(newPro);
-        
+    if(total.innerHTML == ''){
+        console.log('Empty')
     }else{
-        addData[tmp] = newPro;
-        mood = 'create';
-        submit.innerHTML = "Create Pruduct";
+        if(mood === 'create'){
+            addData.push(newPro);
+            
+        }else{
+            addData[tmp] = newPro;
+            mood = 'create';
+            submit.innerHTML = "Create Pruduct";
+        }
+        
+        localStorage.setItem('product', JSON.stringify(addData));
+        clearD();
     }
     
-    localStorage.setItem('product', JSON.stringify(addData));
-
-    clearD();
     showD();
 }
 
@@ -113,14 +117,11 @@ function updData(i){
 
 // Delete
 function delData(i){
-    addData.splice(i, 1);
-    localStorage.product = JSON.stringify(addData);
-    showD();
+    if(confirm('Are You Sure ?')){
+      
+        addData.splice(i, 1);
+        localStorage.product = JSON.stringify(addData);
+        showD();
+        
+    }
 }
-
-// Jquery
-// $('#create').click(() => {
-//     // if(mood === 'create'){
-//     //     title.val('');
-//     // }
-// });
